@@ -1,0 +1,340 @@
+# Saqib-Ejaz
+
+Q 5.12
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter  Marks : ');
+  String marks = stdin.readLineSync()!;
+  int marks1 = int.parse(marks);
+  if (marks1 >= 90 && marks1 <= 100) {
+    print('Grade A');
+  }
+  if (marks1 >= 80 && marks1 <= 89) {
+    print('Grade B');
+  } else if (marks1 >= 70 && marks1 <= 79) {
+    print('Grade C');
+  } else if (marks1 >= 60 && marks1 <= 69) {
+    print('Grade D');
+  } else if (marks1 < 60) {
+    print('Grade F');
+  } else if (marks1 >= 0 && marks1 <= 59) {
+    print('Geade F');
+  }
+  else{
+    print('Invilid Marks');
+  }
+}
+
+Q5.13
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter  Units : ');
+  double unitsInStr = double.parse(stdin.readLineSync()!);
+  double unit = unitsInStr;
+  double bill;
+
+  if(unit<=300){
+    bill=unit*2;
+    print('Total Bill: $bill');
+  } 
+  else if(unit>300 && unit<=500){
+    bill=unit*5;
+    print('Total Bill: $bill');
+  }
+  else if(unit>500){
+    bill=unit*7;
+    print('Total Bill: $bill');
+  }
+  else if(unit>2000){
+    bill=unit*(unit*5/100);
+    print('Total Bill: $bill');
+  }
+  
+}
+
+Q5.14
+import 'dart:io';
+
+void main() {
+  double area;
+  stdout.write('Enter Radius: ');
+  String? radiusStr = stdin.readLineSync();
+  double? radius = double.tryParse(radiusStr!);
+  if (radius == null) {
+    print('Invalid Number');
+    return;
+  }
+
+  stdout.write("Enter 1 for radius and 2 for circumference: ");
+  String? choiceStr = stdin.readLineSync();
+  double? choice = double.tryParse(choiceStr!);
+  if (choice == null) {
+    print('Invalid Number');
+    return;
+  }
+
+  if (choice == 1) {
+    area = 3.14 * radius * radius;
+    print('Area = $area');
+  } else if (choice == 2) {
+    area = 2.0 * 3.14 * radius;
+    print('Circumference = $area');
+  } else {
+    print('Invalid Number');
+  }
+}
+Q5.15
+
+import 'dart:io';
+
+
+void main() {
+  double netSalary = 0;
+  stdout.write('Enter Salary: ');
+  String salaryInStr = (stdin.readLineSync()!);
+  double? salary = double.tryParse(salaryInStr);
+  if (salary == null) {
+    print('Invalid input');
+    return;
+  } else {
+    if (salary >= 20000) {
+      netSalary = salary - 7 / salary * 100;
+      print('Net Salary: $netSalary');
+    } else if (salary >= 10000 && salary <= 20000) {
+      netSalary = salary - 1000;
+      print('Net Salary: $netSalary');
+    } else if (salary < 10000) {
+      netSalary = salary;
+      print('Net Salary: $netSalary');
+    }
+  }
+}
+
+
+Q5.16
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter first number : ');
+  String num1Str = stdin.readLineSync()!;
+  int? num = int.tryParse(num1Str);
+
+  if (num == null) {
+    print('Invalid input');
+    return;
+  }
+  stdout.write('Enter Second number : ');
+  String num2Str = stdin.readLineSync()!;
+  int? num2 = int.tryParse(num2Str);
+
+  if (num2 == null) {
+    print('Invalid input');
+    return;
+  }
+  stdout.write('Enter Third number : ');
+  String num3Str = stdin.readLineSync()!;
+  int? num3 = int.tryParse(num3Str);
+
+  if (num3 == null) {
+    print('Invalid input');
+    return;
+  }
+
+  if (num < num2) {
+    if (num < num3) {
+      print('$num is smallest');
+    }
+  }
+  if (num2 < num) {
+    if (num2 < num3) {
+      print('$num2 is smallest');
+    }
+  }
+  if (num3 < num) {
+    if (num3 < num2) {
+      print('$num3 is smallest');
+    }
+  }
+}
+
+Q5.17
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter first number: ');
+  String? num1Str = stdin.readLineSync()!;
+  int? num1 = int.tryParse(num1Str);
+  if (num1 == null) {
+    print('Invalid Input try again ');
+    return;
+  }
+  stdout.write('Enter second number: ');
+  String? num2Str = stdin.readLineSync()!;
+  int? num2 = int.tryParse(num2Str);
+  if (num2 == null) {
+    print('Invalid Input try again ');
+    return;
+  }
+  stdout.write('Enter third number: ');
+  String? num3Str = stdin.readLineSync()!;
+  int? num3 = int.tryParse(num3Str);
+  if (num3 == null) {
+    print('Invalid Input try again ');
+    return;
+  }
+
+  if (num1 == num2 && num1 == num3) {
+    if (num2 == num1 && num2 == num3) {
+      if (num3 == num1 && num3 == num2) {
+        print('All Numbers are equal');
+      }
+    }
+  } else {
+    print('All numbers are not equal');
+  }
+}
+ 
+Q5.18
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter first number: ');
+  String? num1Str = stdin.readLineSync()!;
+  int? num1 = int.tryParse(num1Str);
+  if (num1 == null) {
+    print('Invalid Input try again ');
+    return;
+  }
+  stdout.write('Enter second number: ');
+  String? num2Str = stdin.readLineSync()!;
+  int? num2 = int.tryParse(num2Str);
+  if (num2 == null) {
+    print('Invalid Input try again ');
+    return;
+  }
+  stdout.write('Enter third number: ');
+  String? num3Str = stdin.readLineSync()!;
+  int? num3 = int.tryParse(num3Str);
+  if (num3 == null) {
+    print('Invalid Input try again ');
+    return;
+  }
+
+  if (num1 > num2 && num1 > num3) {
+    print('Maximum num is: $num1 ');
+  } else if (num2 > num1 && num2 > num3) {
+    print('Maximum num is: $num2');
+  } else {
+    print('Maximum num is: $num3');
+  }
+}
+
+Q5.19
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter first Character : ');
+  String char = stdin.readLineSync()!;
+
+  if (char == 'A' ||
+      char == 'E' ||
+      char == 'I' ||
+      char == 'O' ||
+      char == 'U' ||
+      char == 'a' ||
+      char == 'e' ||
+      char == 'i' ||
+      char == 'o' ||
+      char == 'u') {
+    print('Vowel');
+  } else {
+    print('not vowel');
+  }
+}
+
+Q5.20
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter first Character : ');
+  String chart = stdin.readLineSync()!;
+  
+
+  if (chart.length == 1) {
+    if (chart.codeUnitAt(0) >= 97 && chart.codeUnitAt(0) <= 122) {
+      print('$chart is Small latter');
+    } else if (chart.codeUnitAt(0) >= 60 && chart.codeUnitAt(0) <= 90) {
+      print('$chart is Capital Latter');
+    } else if (chart.codeUnitAt(0) >= 48 && chart.codeUnitAt(0) <= 57) {
+      print('$chart is a digit');
+    } else if (chart.codeUnitAt(0) >= 32 && chart.codeUnitAt(0) <= 47) {
+      print('$chart is a special symbol');
+    }
+  } else {
+    print('Invalid');
+  }
+}
+
+Q5.21
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter Number : ');
+  String numInStr = stdin.readLineSync()!;
+  int? num = int.tryParse(numInStr);
+  if (num != null) {
+    if (num > 0) {
+      if (num % 2 == 0) {
+        print('Even Number ');
+      } else {
+        print('Odd number');
+      }
+    } else {
+      print('Invalid');
+    }
+  }
+}
+
+Q5.22
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter first digit : ');
+  String num1Str = stdin.readLineSync()!;
+  int? num1 = int.tryParse(num1Str);
+  if (num1 == null) {
+    print('Invalid Input');
+    return;
+  }
+  stdout.write('Enter second digit : ');
+  String num2Str = stdin.readLineSync()!;
+  int? num2 = int.tryParse(num2Str);
+  if (num2 == null) {
+    print('Invalid Input');
+    return;
+  }
+  stdout.write('Enter third digit : ');
+  String num3Str = stdin.readLineSync()!;
+  int? num3 = int.tryParse(num3Str);
+  if (num3 == null) {
+    print('Invalid Input');
+    return;
+  }
+
+  print('$num1  $num2  $num3');
+  print('$num1  $num3  $num2');
+  print('$num2  $num1  $num3');
+  print('$num3  $num1  $num2');
+  print('$num3  $num2  $num1');
+}
